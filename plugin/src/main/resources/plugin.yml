@@ -17,7 +17,7 @@ softdepend:
   - BetonQuest
   - ClueScrolls
   - mcMMO
-  - AureliumSkills
+#  - AureliumSkills
   - AuraSkills
   - MMOCore
   - EcoSkills
