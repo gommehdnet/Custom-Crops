@@ -22,6 +22,7 @@ import com.flowpowered.nbt.IntTag;
 import com.flowpowered.nbt.StringTag;
 import com.flowpowered.nbt.Tag;
 import net.momirealms.customcrops.api.CustomCropsPlugin;
+import net.momirealms.customcrops.api.event.PotWitherEvent;
 import net.momirealms.customcrops.api.mechanic.item.Fertilizer;
 import net.momirealms.customcrops.api.mechanic.item.ItemType;
 import net.momirealms.customcrops.api.mechanic.item.Pot;
@@ -221,6 +222,13 @@ public class MemoryPot extends AbstractCustomCropsBlock implements WorldPot {
                 loseWater = true;
             }
             setWater(water);
+        }
+
+        if ((water - 1) <= 0) {
+            final PotWitherEvent event = new PotWitherEvent(Objects.requireNonNull(super.getLocation().getBukkitLocation()));
+            if (!event.callEvent()) {
+                return;
+            }
         }
 
         if (loseFertilizer || loseWater) {
