@@ -69,10 +69,10 @@ public class IntegrationManagerImpl implements IntegrationManager {
             registerLevelPlugin("EcoJobs", new EcoJobsImpl());
             hookMessage("EcoJobs");
         }
-        if (plugin.isHookedPluginEnabled("AureliumSkills")) {
+/*        if (plugin.isHookedPluginEnabled("AureliumSkills")) {
             registerLevelPlugin("AureliumSkills", new AureliumSkillsImpl());
             hookMessage("AureliumSkills");
-        }
+        }*/
         if (plugin.isHookedPluginEnabled("EcoSkills")) {
             registerLevelPlugin("EcoSkills", new EcoSkillsImpl());
             hookMessage("EcoSkills");

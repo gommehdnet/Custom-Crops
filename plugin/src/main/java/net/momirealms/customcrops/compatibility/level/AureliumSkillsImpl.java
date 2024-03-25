@@ -13,7 +13,8 @@
  *
  *  You should have received a copy of the GNU General Public License
  *  along with this program.  If not, see <https://www.gnu.org/licenses/>.
- */
+ *//*
+
 
 package net.momirealms.customcrops.compatibility.level;
 
@@ -40,3 +41,4 @@ public class AureliumSkillsImpl implements LevelInterface {
         return AureliumAPI.getSkillLevel(player, AureliumAPI.getPlugin().getSkillRegistry().getSkill(target));
     }
 }
+*/
